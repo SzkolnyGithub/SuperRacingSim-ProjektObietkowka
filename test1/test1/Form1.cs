@@ -33,5 +33,13 @@ namespace test1
         {
             this.Close();
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.A)
+            {
+                start.Text += "test";
+            }
+        }
     }
 }
