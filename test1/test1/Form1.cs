@@ -26,7 +26,6 @@ namespace test1
         {
             poziomy lvSelector = new poziomy();
             lvSelector.Show(this);
-            
         }
 
         private void exit_Click(object sender, EventArgs e)

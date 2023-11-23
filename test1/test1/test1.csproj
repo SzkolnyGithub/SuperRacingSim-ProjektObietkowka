@@ -52,7 +52,9 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="lv1.cs" />
+    <Compile Include="lv1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="lv1.Designer.cs">
       <DependentUpon>lv1.cs</DependentUpon>
     </Compile>
