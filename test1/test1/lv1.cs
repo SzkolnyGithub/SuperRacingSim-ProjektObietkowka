@@ -18,6 +18,7 @@ namespace test1
         // Y: 182 - gorna linia, Y: 366 - dolna linia
         int x = 20;
         int y = 235;
+        bool shown = false;
         private void Ustaw()
         {
             System.Timers.Timer licznik = new System.Timers.Timer(1); // moze 10
@@ -38,7 +39,7 @@ namespace test1
         }
         private void sprawdz(object sender, ElapsedEventArgs e)
         {
-            if (y <= 182 || y+ruch.Height >= 366)
+            if (y <= 182 || y+ruch.Height >= 366 || x < 0)
             {
                 x = 20;
                 y = 235;
@@ -47,9 +48,17 @@ namespace test1
             if(x+ruch.Width >= 760)
             {
                 x = 750;
-                ruch.Location = new Point(x, y);
+                y = 235;
+                PokazMessage();
+            }
+        }
+        private void PokazMessage()
+        {
+            if(!shown)
+            {
+                shown = true;
                 MessageBox.Show("Udało ci się wygrać!");
-                lv1.Close(); // no prawie - Application.Exit();
+                Application.Restart();
             }
         }
         private void level1_Paint(object sender, PaintEventArgs e)
@@ -77,28 +86,28 @@ namespace test1
         {
             if(e.KeyCode == Keys.A)
             {
-                x--;
+                x -= 5;
                 ruch.Location = new Point(x, y);
             }
             if (e.KeyCode == Keys.D)
             {
-                x++;
+                x += 5;
                 ruch.Location = new Point(x, y);
             }
             if (e.KeyCode == Keys.W)
             {
-                y--;
+                y -= 5;
                 ruch.Location = new Point(x, y);
             }
             if (e.KeyCode == Keys.S)
             {
-                y++;
+                y += 5;
                 ruch.Location = new Point(x, y);
             }
         }
         private void level1_MouseMove(object sender, MouseEventArgs e)
         {
-            l1.Text = "X: " + e.X + "  Y: " + e.Y;
+            // l1.Text = "X: " + e.X + "  Y: " + e.Y;
         }
         private void level1_Click(object sender, EventArgs e){}
         private void ruch_Click(object sender, EventArgs e){}

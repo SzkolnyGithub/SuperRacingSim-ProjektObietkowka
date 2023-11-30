@@ -58,6 +58,12 @@
     <Compile Include="lv1.Designer.cs">
       <DependentUpon>lv1.cs</DependentUpon>
     </Compile>
+    <Compile Include="lv2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lv2.Designer.cs">
+      <DependentUpon>lv2.cs</DependentUpon>
+    </Compile>
     <Compile Include="poziomy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="lv1.resx">
       <DependentUpon>lv1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lv2.resx">
+      <DependentUpon>lv2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="poziomy.resx">
       <DependentUpon>poziomy.cs</DependentUpon>

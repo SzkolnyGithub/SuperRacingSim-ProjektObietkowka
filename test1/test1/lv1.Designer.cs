@@ -30,8 +30,6 @@
         {
             this.level1 = new System.Windows.Forms.PictureBox();
             this.ruch = new System.Windows.Forms.Button();
-            this.l1 = new System.Windows.Forms.Label();
-            this.l2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.level1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,39 +47,19 @@
             // 
             // ruch
             // 
+            this.ruch.BackColor = System.Drawing.SystemColors.HotTrack;
             this.ruch.Location = new System.Drawing.Point(484, 104);
             this.ruch.Name = "ruch";
             this.ruch.Size = new System.Drawing.Size(75, 75);
             this.ruch.TabIndex = 1;
-            this.ruch.Text = "poruszaj sie";
-            this.ruch.UseVisualStyleBackColor = true;
+            this.ruch.UseVisualStyleBackColor = false;
             this.ruch.Click += new System.EventHandler(this.ruch_Click);
-            // 
-            // l1
-            // 
-            this.l1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.l1.Location = new System.Drawing.Point(269, 113);
-            this.l1.Name = "l1";
-            this.l1.Size = new System.Drawing.Size(189, 40);
-            this.l1.TabIndex = 2;
-            this.l1.Text = "label1";
-            // 
-            // l2
-            // 
-            this.l2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.l2.Location = new System.Drawing.Point(287, 76);
-            this.l2.Name = "l2";
-            this.l2.Size = new System.Drawing.Size(203, 23);
-            this.l2.TabIndex = 3;
-            this.l2.Text = "l2";
             // 
             // lv1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(834, 511);
-            this.Controls.Add(this.l2);
-            this.Controls.Add(this.l1);
             this.Controls.Add(this.ruch);
             this.Controls.Add(this.level1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -100,7 +78,5 @@
 
         private System.Windows.Forms.PictureBox level1;
         private System.Windows.Forms.Button ruch;
-        private System.Windows.Forms.Label l1;
-        private System.Windows.Forms.Label l2;
     }
 }
