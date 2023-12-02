@@ -35,6 +35,8 @@ namespace test1
             InitializeComponent();
             level1.Width = 850;
             level1.Height = 550;
+            MaximizeBox = false;
+            MinimizeBox = false;
             ruch.Location = new Point(20, 235);
         }
         private void sprawdz(object sender, ElapsedEventArgs e)

@@ -10,19 +10,22 @@ using System.Windows.Forms;
 
 namespace test1
 {
-    public partial class lv2 : Form
+    public partial class lv3 : Form
     {
-        int x = 710;
-        int y = 370;
+        int x = 20;
+        int y = 400;
         bool shown = false;
-        public lv2()
+
+        public lv3()
         {
             InitializeComponent();
-            okno_glowne.Width = 820;
-            okno_glowne.Height = 500;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             MinimizeBox = false;
-            samochod.Location = new Point(x, y);
+            okno_glowne.Width = 820;
+            okno_glowne.Height = 500;
+            samochod.BringToFront();
+           
         }
         private void Ustaw()
         {
@@ -31,23 +34,29 @@ namespace test1
             licznik.AutoReset = true;
             licznik.Enabled = true;
         }
+
         private void sprawdz(object sender, EventArgs e)
         {
-            int width = okno_glowne.Width / 5;
-            int height = okno_glowne.Height / 3;
-            if(x < width*4 && y+samochod.Height > height*2 || x+samochod.Width > width && y < height)
-            {
-                kraksa();
-            }
-            if(x < 0 || x+samochod.Width > okno_glowne.Width || y+samochod.Height > okno_glowne.Height)
-            {
-                kraksa();
-            }
-            if(x > 0 && x < width && y <= 55)
+            if(x+25 >= 730 && y > 0 && y < 100)
             {
                 PokazMessage();
             }
-           
+            if(x< 655 && y < 365 && y > 280)
+            {
+                kraksa();
+            }
+            if(x+50 > 165 && y+50 > 100 && y < 185)
+            {
+                kraksa();
+            }
+            if(x < 0 || x+50 > 820)
+            {
+                kraksa();
+            }
+            if (y < 0 || y + 50 > 460)
+            {
+                kraksa();
+            }
         }
 
         private void PokazMessage()
@@ -62,43 +71,46 @@ namespace test1
 
         private void kraksa()
         {
-            x = 710;
-            y = 370;
+            x = 12;
+            y = 399;
             MessageBox.Show("Wyjechałeś poza drogę!");
         }
-        private void okno_glowne_Paint(object sender, PaintEventArgs e)
+
+        private void okno_glowne_Paint_1(object sender, PaintEventArgs e)
         {
+
             Graphics gdi = e.Graphics;
             int width = okno_glowne.Width / 5;
-            int height = okno_glowne.Height / 3;
+            int height = okno_glowne.Height / 5;
+            int width2 = okno_glowne.Width;
+            int height2 = okno_glowne.Height;
             Pen pen = new Pen(Brushes.Black, 2);
             Pen pen2 = new Pen(Brushes.Gray, 2);
             Pen white2 = new Pen(Color.WhiteSmoke);
             SolidBrush Gray = new SolidBrush(Color.Gray);
+            SolidBrush Blue = new SolidBrush(Color.Blue);
             SolidBrush Black = new SolidBrush(Color.Black);
             SolidBrush white = new SolidBrush(Color.WhiteSmoke);
-            Rectangle droga1 = new Rectangle(width * 4, height, width, height*2);
-            Rectangle droga2 = new Rectangle(0, height, okno_glowne.Width, height);
-            Rectangle droga3 = new Rectangle(0, 0, width, height);
-            Rectangle koniecB = new Rectangle(0, 25, width, 30);
-            Rectangle koniecC = new Rectangle(0, 55, width, 30);
-           
+            Rectangle droga1 = new Rectangle(0, height*4-35, width2, height);
+            Rectangle droga2 = new Rectangle(width*4, height*3-15, width, height);
+            Rectangle droga3 = new Rectangle(0, height*2-15, width2, height);
+            Rectangle droga4 = new Rectangle(0, height, width, height);
+            Rectangle droga5 = new Rectangle(0, 0, width2, height);
+            Rectangle koniecB = new Rectangle(width*4+75, 0, 50, 100);
+            Rectangle koniecC = new Rectangle(width * 4 +25, 0, 50, 100);
             gdi.FillRectangle(Gray, droga1);
             gdi.FillRectangle(Gray, droga2);
             gdi.FillRectangle(Gray, droga3);
+            gdi.FillRectangle(Gray, droga4);
+            gdi.FillRectangle(Gray, droga5);
             gdi.FillRectangle(white, koniecB);
-            gdi.FillRectangle(Black, koniecC);
-            //dorobić obramówkę za pomocą drawline tutaj na końcu
-        }
+           gdi.FillRectangle(Black, koniecC);
 
-        private void okno_glowne_MouseMove(object sender, MouseEventArgs e)
-        {
-            // l1.Text = "X: " + e.X + " Y: " + e.Y;
         }
-        private void lv2_Load(object sender, EventArgs e) { Ustaw(); }
-        private void lv2_MouseMove(object sender, MouseEventArgs e) { }
+      
+        private void lv3_Load(object sender, EventArgs e) { Ustaw(); }
 
-        private void lv2_KeyDown(object sender, KeyEventArgs e)
+        private void lv3_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.A)
             {
@@ -120,6 +132,25 @@ namespace test1
                 y += 5;
                 samochod.Location = new Point(x, y);
             }
+        }
+
+        private void samochod_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lv3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lv3_MouseMove(object sender, MouseEventArgs e)
+        {
+          
+        }
+
+        private void okno_glowne_MouseMove(object sender, MouseEventArgs e)
+        {
         }
     }
 }

@@ -31,8 +31,8 @@ namespace test1
 
         private void level3_Click(object sender, EventArgs e)
         {
-            /*lv3 level3 = new lv3();
-            level3.Show(this);*/
+            lv3 level3 = new lv3();
+            level3.Show(this);
         }
     }
 }
