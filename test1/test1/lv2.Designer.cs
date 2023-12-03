@@ -40,6 +40,7 @@
             this.okno_glowne.Size = new System.Drawing.Size(100, 50);
             this.okno_glowne.TabIndex = 1;
             this.okno_glowne.TabStop = false;
+            this.okno_glowne.Click += new System.EventHandler(this.okno_glowne_Click);
             this.okno_glowne.Paint += new System.Windows.Forms.PaintEventHandler(this.okno_glowne_Paint);
             this.okno_glowne.MouseMove += new System.Windows.Forms.MouseEventHandler(this.okno_glowne_MouseMove);
             // 
@@ -51,6 +52,7 @@
             this.samochod.Size = new System.Drawing.Size(40, 60);
             this.samochod.TabIndex = 2;
             this.samochod.UseVisualStyleBackColor = false;
+            this.samochod.Click += new System.EventHandler(this.samochod_Click);
             // 
             // lv2
             // 
@@ -59,6 +61,7 @@
             this.ClientSize = new System.Drawing.Size(804, 461);
             this.Controls.Add(this.samochod);
             this.Controls.Add(this.okno_glowne);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.KeyPreview = true;
             this.Name = "lv2";
             this.Text = "Super Racing Sim - Poziom 2";

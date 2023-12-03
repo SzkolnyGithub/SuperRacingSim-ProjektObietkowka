@@ -51,6 +51,7 @@
             this.okno_glowne.Size = new System.Drawing.Size(100, 50);
             this.okno_glowne.TabIndex = 1;
             this.okno_glowne.TabStop = false;
+            this.okno_glowne.Click += new System.EventHandler(this.okno_glowne_Click);
             this.okno_glowne.Paint += new System.Windows.Forms.PaintEventHandler(this.okno_glowne_Paint_1);
             this.okno_glowne.MouseMove += new System.Windows.Forms.MouseEventHandler(this.okno_glowne_MouseMove);
             // 

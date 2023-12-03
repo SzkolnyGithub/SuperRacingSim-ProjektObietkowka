@@ -85,6 +85,7 @@
             this.Controls.Add(this.level2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lv1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "poziomy";
             this.Text = "Super Racing Sim - wybór poziomu";
             this.ResumeLayout(false);

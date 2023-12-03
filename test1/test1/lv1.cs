@@ -71,16 +71,21 @@ namespace test1
             SolidBrush Gray = new SolidBrush(Color.Gray);
             SolidBrush Black = new SolidBrush(Color.Black);
             SolidBrush white = new SolidBrush(Color.WhiteSmoke);
+            SolidBrush trawa = new SolidBrush(Color.YellowGreen);
             int height = level1.Height / 3;
             Rectangle rect = new Rectangle(0, height, level1.Width, height);
             Rectangle meta = new Rectangle(730, height, 30, height);
             Rectangle meta2 = new Rectangle(760, height, 30, height);
+            Rectangle trawa1 = new Rectangle(0, 0, level1.Width, height);
+            Rectangle trawa2 = new Rectangle(0, height * 2, level1.Width, level1.Height);
             e.Graphics.FillRectangle(Gray, rect);
             e.Graphics.DrawRectangle(pen2, rect);
             e.Graphics.FillRectangle(Black, meta);
             e.Graphics.DrawRectangle(pen, meta);
             e.Graphics.FillRectangle(white, meta2);
             e.Graphics.DrawRectangle(white2, meta2);
+            e.Graphics.FillRectangle(trawa, trawa1);
+            e.Graphics.FillRectangle(trawa, trawa2);
             e.Graphics.DrawLine(pen, 0, height, level1.Width, height);
             e.Graphics.DrawLine(pen, 0, height*2, level1.Width, height*2);
         }
@@ -107,10 +112,7 @@ namespace test1
                 ruch.Location = new Point(x, y);
             }
         }
-        private void level1_MouseMove(object sender, MouseEventArgs e)
-        {
-            // l1.Text = "X: " + e.X + "  Y: " + e.Y;
-        }
+        private void level1_MouseMove(object sender, MouseEventArgs e){}
         private void level1_Click(object sender, EventArgs e){}
         private void ruch_Click(object sender, EventArgs e){}
         private void lv1_MouseMove(object sender, MouseEventArgs e){}

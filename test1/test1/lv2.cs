@@ -24,6 +24,7 @@ namespace test1
             MinimizeBox = false;
             samochod.Location = new Point(x, y);
         }
+        private void lv2_Load(object sender, EventArgs e) { Ustaw(); }
         private void Ustaw()
         {
             System.Timers.Timer licznik = new System.Timers.Timer(1); // moze 10
@@ -59,7 +60,7 @@ namespace test1
                 Application.Restart();
             }
         }
-
+        
         private void kraksa()
         {
             x = 710;
@@ -77,7 +78,8 @@ namespace test1
             SolidBrush Gray = new SolidBrush(Color.Gray);
             SolidBrush Black = new SolidBrush(Color.Black);
             SolidBrush white = new SolidBrush(Color.WhiteSmoke);
-            Rectangle droga1 = new Rectangle(width * 4, height, width, height*2);
+            SolidBrush trawa = new SolidBrush(Color.YellowGreen);
+            Rectangle droga1 = new Rectangle(width * 4, height, width, height * 2);
             Rectangle droga2 = new Rectangle(0, height, okno_glowne.Width, height);
             Rectangle droga3 = new Rectangle(0, 0, width, height);
             Rectangle koniecB = new Rectangle(0, 25, width, 30);
@@ -88,15 +90,14 @@ namespace test1
             gdi.FillRectangle(Gray, droga3);
             gdi.FillRectangle(white, koniecB);
             gdi.FillRectangle(Black, koniecC);
-            //dorobić obramówkę za pomocą drawline tutaj na końcu
-        }
+            gdi.FillRectangle(trawa, width, 0, width * 4, height);
+            gdi.FillRectangle(trawa, 0, height * 2, width * 4, height);
+            gdi.DrawLine(pen, width * 4, okno_glowne.Height, width * 4, height * 2);
+            gdi.DrawLine(pen, 0, height * 2, width * 4, height * 2);
+            gdi.DrawLine(pen, width, 0, width, height);
+            gdi.DrawLine(pen, width, height, okno_glowne.Width, height);
 
-        private void okno_glowne_MouseMove(object sender, MouseEventArgs e)
-        {
-            // l1.Text = "X: " + e.X + " Y: " + e.Y;
         }
-        private void lv2_Load(object sender, EventArgs e) { Ustaw(); }
-        private void lv2_MouseMove(object sender, MouseEventArgs e) { }
 
         private void lv2_KeyDown(object sender, KeyEventArgs e)
         {
@@ -121,5 +122,10 @@ namespace test1
                 samochod.Location = new Point(x, y);
             }
         }
+
+        private void okno_glowne_Click(object sender, EventArgs e){}
+        private void samochod_Click(object sender, EventArgs e){}
+        private void lv2_MouseMove(object sender, MouseEventArgs e){}
+        private void okno_glowne_MouseMove(object sender, MouseEventArgs e){}
     }
 }

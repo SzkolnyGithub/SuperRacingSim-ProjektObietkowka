@@ -91,6 +91,7 @@ namespace test1
             SolidBrush Blue = new SolidBrush(Color.Blue);
             SolidBrush Black = new SolidBrush(Color.Black);
             SolidBrush white = new SolidBrush(Color.WhiteSmoke);
+            SolidBrush trawa = new SolidBrush(Color.YellowGreen);
             Rectangle droga1 = new Rectangle(0, height*4-35, width2, height);
             Rectangle droga2 = new Rectangle(width*4, height*3-15, width, height);
             Rectangle droga3 = new Rectangle(0, height*2-15, width2, height);
@@ -104,8 +105,15 @@ namespace test1
             gdi.FillRectangle(Gray, droga4);
             gdi.FillRectangle(Gray, droga5);
             gdi.FillRectangle(white, koniecB);
-           gdi.FillRectangle(Black, koniecC);
-
+            gdi.FillRectangle(Black, koniecC);
+            gdi.FillRectangle(trawa, 0, height * 3 - 15, width * 4, height - 20);
+            gdi.FillRectangle(trawa, width, height, width * 4, height - 15);
+            gdi.DrawLine(pen, 0, height * 4 - 35, width * 4, height * 4 - 35);
+            gdi.DrawLine(pen, 0, height * 3 - 15, width * 4, height * 3 - 15);
+            gdi.DrawLine(pen, width * 4, height * 4 - 35, width * 4, height * 3 - 15);
+            gdi.DrawLine(pen, width, height, okno_glowne.Width, height);
+            gdi.DrawLine(pen, width, height * 2 - 15, okno_glowne.Width, height * 2 - 15);
+            gdi.DrawLine(pen, width, height, width, height * 2 - 15);
         }
       
         private void lv3_Load(object sender, EventArgs e) { Ustaw(); }
@@ -134,23 +142,10 @@ namespace test1
             }
         }
 
-        private void samochod_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lv3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lv3_MouseMove(object sender, MouseEventArgs e)
-        {
-          
-        }
-
-        private void okno_glowne_MouseMove(object sender, MouseEventArgs e)
-        {
-        }
+        private void samochod_Click(object sender, EventArgs e){}
+        private void lv3_Paint(object sender, PaintEventArgs e){}
+        private void lv3_MouseMove(object sender, MouseEventArgs e){}
+        private void okno_glowne_MouseMove(object sender, MouseEventArgs e){}
+        private void okno_glowne_Click(object sender, EventArgs e){}
     }
 }

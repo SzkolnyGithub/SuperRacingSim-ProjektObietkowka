@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.start = new System.Windows.Forms.Button();
-            this.custom = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // start
             // 
-            this.start.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.start.Location = new System.Drawing.Point(257, 142);
+            this.start.Font = new System.Drawing.Font("Lato", 30F);
+            this.start.Location = new System.Drawing.Point(267, 142);
             this.start.Name = "start";
             this.start.Size = new System.Drawing.Size(235, 90);
             this.start.TabIndex = 0;
@@ -44,32 +44,34 @@
             this.start.UseVisualStyleBackColor = true;
             this.start.Click += new System.EventHandler(this.start_Click);
             // 
-            // custom
-            // 
-            this.custom.Location = new System.Drawing.Point(300, 261);
-            this.custom.Name = "custom";
-            this.custom.Size = new System.Drawing.Size(150, 70);
-            this.custom.TabIndex = 1;
-            this.custom.Text = "ustawienia";
-            this.custom.UseVisualStyleBackColor = true;
-            // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(300, 359);
+            this.exit.Font = new System.Drawing.Font("Lato", 20F);
+            this.exit.Location = new System.Drawing.Point(291, 271);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(150, 70);
+            this.exit.Size = new System.Drawing.Size(195, 85);
             this.exit.TabIndex = 2;
             this.exit.Text = "Wyjście";
             this.exit.UseVisualStyleBackColor = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Lato", 25F);
+            this.label1.Location = new System.Drawing.Point(204, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(387, 44);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Super Racing Simulator";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(834, 461);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.exit);
-            this.Controls.Add(this.custom);
             this.Controls.Add(this.start);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
@@ -83,8 +85,8 @@
         #endregion
 
         private System.Windows.Forms.Button start;
-        private System.Windows.Forms.Button custom;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Label label1;
     }
 }
 
