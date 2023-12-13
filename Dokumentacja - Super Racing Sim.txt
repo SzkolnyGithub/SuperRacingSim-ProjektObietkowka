@@ -1,0 +1,12 @@
+Super Racing Sim jest to program stworzony jako próba wykonania gry wyścigowej w języku C# przy wykorzystaniu Windows Forms.
+
+Naszym głównymi celami było:
+- Stworzenie aplikacji z nawigacją między wieloma oknami
+- Automatycznym ponownym otworzeniem aplikacji po ukończeniu danego poziomu
+- Możliwość poruszania się za pomocą klawiszy klawiatury
+
+Czuje, że udało się nam spełnić wszystkie w.w. cele. // nwm czy to zostawic, najwyzej usun pozniej czy cos
+
+Projekt tworzyłem razem z Oliwierem Gruszką, na lekcjach razem tworzyliśmy program i szukaliśmy szczegółowych informacji na temat potrzebnych nam zasobów w internecie. Poza lekcjami w miarę potrzeb osobno kończyliśmy tworzenie poszególnych poziomów, wykończenia i szlify w taki sposób, aby aplikacja działała najlepiej, jak tylko może.
+
+// cos jeszcze napisac? w razie czego to pisz, mozesz na spokojnie zmieniac szyk tych punktow itd...
