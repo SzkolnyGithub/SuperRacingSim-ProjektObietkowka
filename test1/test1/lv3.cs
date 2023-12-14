@@ -12,22 +12,22 @@ namespace test1
 {
     public partial class lv3 : Form
     {
-        int x = 20;
+        int x = 20; // pozycja startowa "pojazdu" i status pokazania komunikatu końcowego
         int y = 400;
         bool shown = false;
 
         public lv3()
         {
             InitializeComponent();
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // brak możliwości zmiany wielkości okna poziomu
             MaximizeBox = false;
             MinimizeBox = false;
-            okno_glowne.Width = 820;
+            okno_glowne.Width = 820; // ustawienie wielkości okna do rysowania
             okno_glowne.Height = 500;
-            samochod.BringToFront();
-           
+            samochod.BringToFront(); // z pewnego powodu bez tej funkcji samochod (dawniej określany mianem "pojazd")
+           // jest schowany pod drogą, ta funkcja sprawia, że jest on widoczny na ekranie
         }
-        private void Ustaw()
+        private void Ustaw() // licznik - działanie takie samo jak w poprzednich dwóch poziomach
         {
             System.Timers.Timer licznik = new System.Timers.Timer(1); // moze 10
             licznik.Elapsed += sprawdz;
@@ -35,7 +35,7 @@ namespace test1
             licznik.Enabled = true;
         }
 
-        private void sprawdz(object sender, EventArgs e)
+        private void sprawdz(object sender, EventArgs e) // sprawdza, czy gracz wyjechał poza drogę lub wygrał
         {
             if(x+25 >= 730 && y > 0 && y < 100)
             {
@@ -59,8 +59,8 @@ namespace test1
             }
         }
 
-        private void PokazMessage()
-        {
+        private void PokazMessage() // jeśli gracz przejechał linię mety, komunikat się wyświetla i jest on przeniesiony
+        { // do okna głównego
             if (!shown)
             {
                 shown = true;
@@ -69,15 +69,15 @@ namespace test1
             }
         }
 
-        private void kraksa()
-        {
+        private void kraksa() // jeśli gracz wyjechał poza drogę, jest on przenoszony do pozycji startowej
+        { // i wyświetlany jest komunikat
             x = 12;
             y = 399;
             MessageBox.Show("Wyjechałeś poza drogę!");
         }
 
-        private void okno_glowne_Paint_1(object sender, PaintEventArgs e)
-        {
+        private void okno_glowne_Paint_1(object sender, PaintEventArgs e) // funkcja rysująca drogę - tak samo jak w poprzednich
+        { // dwóch poziomach
 
             Graphics gdi = e.Graphics;
             int width = okno_glowne.Width / 5;
@@ -116,9 +116,9 @@ namespace test1
             gdi.DrawLine(pen, width, height, width, height * 2 - 15);
         }
       
-        private void lv3_Load(object sender, EventArgs e) { Ustaw(); }
+        private void lv3_Load(object sender, EventArgs e) { Ustaw(); } // ustawienie licznika
 
-        private void lv3_KeyDown_1(object sender, KeyEventArgs e)
+        private void lv3_KeyDown_1(object sender, KeyEventArgs e) // obsługa poruszania się za pomocą klawiatury
         {
             if (e.KeyCode == Keys.A)
             {
@@ -142,7 +142,7 @@ namespace test1
             }
         }
 
-        private void samochod_Click(object sender, EventArgs e){}
+        private void samochod_Click(object sender, EventArgs e){} // funkcję do testowania funkcjonalności
         private void lv3_Paint(object sender, PaintEventArgs e){}
         private void lv3_MouseMove(object sender, MouseEventArgs e){}
         private void okno_glowne_MouseMove(object sender, MouseEventArgs e){}

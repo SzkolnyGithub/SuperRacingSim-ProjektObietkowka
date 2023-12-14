@@ -12,31 +12,31 @@ namespace test1
 {
     public partial class lv2 : Form
     {
-        int x = 710;
+        int x = 710; // pozycja oryginalna "pojazdu"
         int y = 370;
-        bool shown = false;
+        bool shown = false; // czy komunikat po przejechaniu linii mety został pokazany
         public lv2()
         {
             InitializeComponent();
-            okno_glowne.Width = 820;
+            okno_glowne.Width = 820; // poniższe przypisania służa do tego samego, co robiły w poziomie 1
             okno_glowne.Height = 500;
             MaximizeBox = false;
             MinimizeBox = false;
             samochod.Location = new Point(x, y);
         }
-        private void lv2_Load(object sender, EventArgs e) { Ustaw(); }
-        private void Ustaw()
+        private void lv2_Load(object sender, EventArgs e) { Ustaw(); } // funkcja włanczająca licznik
+        private void Ustaw() // funkcja ustawiająca licznik
         {
             System.Timers.Timer licznik = new System.Timers.Timer(1); // moze 10
             licznik.Elapsed += sprawdz;
             licznik.AutoReset = true;
             licznik.Enabled = true;
         }
-        private void sprawdz(object sender, EventArgs e)
-        {
+        private void sprawdz(object sender, EventArgs e) // funkcja sprawdzająca, czy gracz przekroczył specyficzne
+        { // części okna - w takim przypadku wykonuje adekwatne działanie
             int width = okno_glowne.Width / 5;
             int height = okno_glowne.Height / 3;
-            if(x < width*4 && y+samochod.Height > height*2 || x+samochod.Width > width && y < height)
+            if(x < width*4 && y+samochod.Height > height*2 || x+samochod.Width > width && y < height) // "pojazd" poza drogą
             {
                 kraksa();
             }
@@ -44,15 +44,15 @@ namespace test1
             {
                 kraksa();
             }
-            if(x > 0 && x < width && y <= 55)
+            if(x > 0 && x < width && y <= 55) // "pojazd" przejechał metę
             {
                 PokazMessage();
             }
            
         }
 
-        private void PokazMessage()
-        {
+        private void PokazMessage() // tak samo jak w poprzednim poziomie, jeśli gracz przejechał linię mety, wyświetlany
+        { // jest komunikat i jest on przenoszony do okna startowego aplikacji
             if (!shown)
             {
                 shown = true;
@@ -61,14 +61,14 @@ namespace test1
             }
         }
         
-        private void kraksa()
-        {
+        private void kraksa() // funkcja obsługująca wyjazd gracza poza drogę
+        { // zostaje on przeniesiony do pozycji startowej i wyświetlany jest komunikat
             x = 710;
             y = 370;
             MessageBox.Show("Wyjechałeś poza drogę!");
         }
-        private void okno_glowne_Paint(object sender, PaintEventArgs e)
-        {
+        private void okno_glowne_Paint(object sender, PaintEventArgs e) // funkcja rysująca poziom - funkcjonuje
+        { // identycznie do tej z poziomu 1
             Graphics gdi = e.Graphics;
             int width = okno_glowne.Width / 5;
             int height = okno_glowne.Height / 3;
@@ -99,7 +99,7 @@ namespace test1
 
         }
 
-        private void lv2_KeyDown(object sender, KeyEventArgs e)
+        private void lv2_KeyDown(object sender, KeyEventArgs e) // funkcja obsługująca poruszanie sie "pojazdu"
         {
             if (e.KeyCode == Keys.A)
             {
@@ -123,7 +123,7 @@ namespace test1
             }
         }
 
-        private void okno_glowne_Click(object sender, EventArgs e){}
+        private void okno_glowne_Click(object sender, EventArgs e){} // funkcje do testowania funkcjonalności
         private void samochod_Click(object sender, EventArgs e){}
         private void lv2_MouseMove(object sender, MouseEventArgs e){}
         private void okno_glowne_MouseMove(object sender, MouseEventArgs e){}

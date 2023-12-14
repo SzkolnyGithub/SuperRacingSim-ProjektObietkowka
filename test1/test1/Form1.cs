@@ -16,18 +16,18 @@ namespace test1
         {
             InitializeComponent();
             label1.Location = new Point(this.Width / 4, this.Height / 8);
-            start.Location = new Point(this.Width / 3, this.Height / 4 + 20);
+            start.Location = new Point(this.Width / 3, this.Height / 4 + 20); // ustawienie elementow w oknie
             exit.Location = new Point(this.Width / 3 + 15, this.Height / 2 + 30);
         }
         private void start_Click(object sender, EventArgs e)
         {
-            poziomy lvSelector = new poziomy();
+            poziomy lvSelector = new poziomy(); // przekierowanie do okna z listą poziomów
             lvSelector.Show(this);
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); // zamyka aplikację
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e) {/*if (e.KeyCode == Keys.A){start.Text += "test";}*/}
         private void Form1_Load(object sender, EventArgs e) { }

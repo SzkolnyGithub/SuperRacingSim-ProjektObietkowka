@@ -19,8 +19,8 @@ namespace test1
 
         private void lv1_Click(object sender, EventArgs e)
         {
-            lv1 level1 = new lv1();
-            level1.Show(this);
+            lv1 level1 = new lv1(); // w tej jak i kolejnych funkcjach jest zawarty kod, który 
+            level1.Show(this); // otwiera kolejne okna z pojedynczymi poziomami
         }
 
         private void level2_Click(object sender, EventArgs e)

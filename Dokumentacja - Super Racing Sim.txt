@@ -5,8 +5,6 @@ Naszym głównymi celami było:
 - Automatycznym ponownym otworzeniem aplikacji po ukończeniu danego poziomu
 - Możliwość poruszania się za pomocą klawiszy klawiatury
 
-Jako zespół długo pracowaliśmy nad tym projektem, myśleliśmy nad sposobami wykorzystania metodyki projektowania obiektowego i według mnie, udało nam się wykorzystać wiele konceptów tego sposoby programowania. W związku z tym, oraz ogólnym stanem aplikacji, uważam, że udało nam się spełnić wszystkie w.w. cele i poprawnie zaimplementować sposób programowania obiektowego.
-
-// troche poprawilem, ale teraz mam wrazenie ze troche za bardzo polecialem z ta dlugo praca, i troche za duzo powtorzen "programowanie obiektowe", ale to ty juz musisz cos zaproponowac bo popadlem w bias pisacza i jestem w tym momencie slepy na inne sposoby ubrania tego w slowa
+Pracując nad tym projektem myśleliśmy nad sposobami wykorzystania metodyki projektowania obiektowego i według mnie, udało nam się wykorzystać wiele konceptów tego sposobu programowania. W związku z tym, oraz ogólnym stanem aplikacji, uważam, że udało nam się spełnić wszystkie w.w. cele.
 
 Projekt tworzyłem razem z Oliwierem Gruszką, na lekcjach razem tworzyliśmy program i szukaliśmy szczegółowych informacji na temat potrzebnych nam zasobów w internecie. Poza lekcjami w miarę potrzeb osobno kończyliśmy tworzenie poszególnych poziomów, wykończenia i szlify w taki sposób, aby aplikacja działała najlepiej, jak tylko może.
