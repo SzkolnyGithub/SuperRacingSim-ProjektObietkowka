@@ -5,6 +5,9 @@ Naszym głównymi celami było:
 - Automatycznym ponownym otworzeniem aplikacji po ukończeniu danego poziomu
 - Możliwość poruszania się za pomocą klawiszy klawiatury
 
+Nasza aplikacja posiada okno główne, okno z możliwością wybrania poziomów oraz 3 poziomy.
+Poruszanie się jest możliwę za pomocą klawiszy WASD. W - w górę, A - w lewo, S - w dół i D - w prawo. Gra nie posiada skomplikowanych mechanik, więc są to wszystkie instrukcje niezbędne do wykorzystania programu. Przyciski są opisane bezpośrednio tekstem w programie a wyskakujące komunikaty dokładnie informują użytkownika o wszystkim co powinien wiedzieć.
+
 Pracując nad tym projektem myśleliśmy nad sposobami wykorzystania metodyki projektowania obiektowego i według mnie, udało nam się wykorzystać wiele konceptów tego sposobu programowania. W związku z tym, oraz ogólnym stanem aplikacji, uważam, że udało nam się spełnić wszystkie w.w. cele.
 
 Projekt tworzyłem razem z Oliwierem Gruszką, na lekcjach razem tworzyliśmy program i szukaliśmy szczegółowych informacji na temat potrzebnych nam zasobów w internecie. Poza lekcjami w miarę potrzeb osobno kończyliśmy tworzenie poszególnych poziomów, wykończenia i szlify w taki sposób, aby aplikacja działała najlepiej, jak tylko może.
